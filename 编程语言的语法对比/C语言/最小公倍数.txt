@@ -1,0 +1,22 @@
+ x*y=最小公倍数*最大公约数
+
+最大公约数：
+辗转相除
+def com(x,y): #不用判断大小
+	if x%y==0:
+		return y
+	else:
+		return com(y,x%y)
+
+辗转相减
+def com(x,y): #
+	if x==y:
+		return y
+	elif x>y:
+		return com(x-y,y)
+	else:
+		return com(y-x,x)
+穷举
+从较小的数开始减减，直到能被x,y整除
+
+函数外定义的变量叫外部变量，即全局变量，函数内不用再重新定义，直接赋值。
